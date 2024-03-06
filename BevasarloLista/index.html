@@ -15,7 +15,7 @@
         
         <div class="container">
             <header>
-                {{appTitle}}
+                <img class="kepkombo" src="../BevasarloLista/Assets/img/Tesco_logo.png">   
             </header>
             <h3 class="mb-3"><strong>Bevásárlólista</strong> <i class="bi bi-card-checklist"></i></h3>
             <br>
@@ -35,7 +35,7 @@
                 <option value="3">Three</option>
             </select>
             <br>
-            <h4>Mennyigég <i class="bi bi-reception-4"></i></h4>
+            <h4>Mennyiség <i class="bi bi-reception-4"></i></h4>
             <div class="form-floating mb-3">
                 <input type="number" class="form-control" id="db" placeholder="">
                 <label for="db"></label>
@@ -54,6 +54,7 @@
             </div>
             <br>
             <h3><strong>Lista</strong> <i class="bi bi-card-list"></i></h3>
+            <div  style="overflow-x:auto;">
             <table class="table">
                 <thead>
                   <tr>
@@ -96,11 +97,11 @@
                   </tr>
                 </tbody>
               </table>
-
+            </div>
 
             <main ng-view></main>
     
-            <footer>{{company}} - {{author}}</footer>
+            <footer><a href="https://www.turr.hu/"> {{company}} - {{author}}</a></footer>
         </div>
 
         <script src="Assets/js/bootstrap.bundle.min.js"></script>
