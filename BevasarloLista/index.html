@@ -18,92 +18,10 @@
                 <img class="kepkombo" src="../BevasarloLista/Assets/img/Tesco_logo.png">   
             </header>
             <h3 class="mb-3"><strong>Bevásárlólista</strong> <i class="bi bi-card-checklist"></i></h3>
-            <br>
-            <h4>Kategória <i class="bi bi-bar-chart-steps"></i></h4>
-            <select class="form-select" id="kat" aria-label="Default select example">
-                <option selected></option>
-            </select>
-            <br>
-            <h4>Termékek <i class="bi bi-basket-fill"></i></h4>
-            <select class="form-select" id="term" aria-label="Default select example">
-                <option selected></option>
-            </select>
-            <br>
-            <h4>Mennyiség <i class="bi bi-reception-4"></i></h4>
-            <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="db" placeholder="">
-                <label for="db"></label>
-            </div>
-            <br>
-            <h4>Egységár <i class="bi bi-graph-up"></i> </h4>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="egyseg" placeholder="">
-                <label for="egyseg"></label>
-            </div>
-            <br>
-            <h4>Összeg <i class="bi bi-cash"></i></h4>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="ossz" placeholder="">
-                <label for="ossz"></label>
-            </div>
-            <br>
-
-            <div class="d-grid gap-2 d-md-block">
-              <button class="btn btn-primary" type="button" onclick="addTerm()">Felvétel</button>
-              <button class="btn btn-primary" type="button">Törlés</button>
-            </div>
-            <br>
-
-
-            <h3><strong>Lista</strong> <i class="bi bi-card-list"></i></h3>
-            <div  style="overflow-x:auto;">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Kategória <i class="bi bi-bar-chart-steps"></i></th>
-                    <th scope="col">Termékek <i class="bi bi-basket-fill"></i></th>
-                    <th scope="col">Mennyiség <i class="bi bi-reception-4"></i></th>
-                    <th scope="col">Egységár <i class="bi bi-graph-up"></i></th>
-                    <th scope="col">Összesen <i class="bi bi-cash"></i></th>
-                    <th scope="col">Művelet <i class="bi bi-plus-slash-minus"></i></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
+        
             <main ng-view></main>
     
-            <footer><a href="https://www.turr.hu/"> {{company}} - {{author}}</a></footer>
+            <footer><a href="https://www.turr.hu/" target="_blank"> Bajai SZC Türr István Technikum</a></footer>
         </div>
 
         <script src="Assets/js/bootstrap.bundle.min.js"></script>

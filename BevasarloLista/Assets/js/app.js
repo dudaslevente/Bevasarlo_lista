@@ -6,14 +6,15 @@ app.run(function($rootScope, $location){
     $rootScope.company = 'Bajai SZC Türr István Technikum';
     $rootScope.serverUrl = 'http://localhost:5000';
 
-
-    
 });
 
 app.config(function($routeProvider){
     $routeProvider
     .when('/lista', {
-        templateUrl: 'index.html',
+        templateUrl: 'Views/main.html',
         controller: 'listCtrl'
+    })
+    .otherwise({
+        redirectTo: '/lista'
     })
 });

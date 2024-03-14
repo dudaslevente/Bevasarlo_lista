@@ -1,30 +1,34 @@
-var app = angular.module('listApp', []);
-let select = document.querySelector('#kat');
+app.controller('listCtrl', function($scope){
 
-app.run(function($rootScope){
-
-    $rootScope.katItems = [];
+    $scope.katItems = [];
+    $scope.category = [];
 
 
     axios.get('http://localhost:3000/mock_data').then(res => {
-        $rootScope.katItems = res.data;
-        $rootScope.katItems.sort();
 
-        $rootScope.katItems.forEach(user => {
-            let option = document.createElement('option');
-            option.value = user.category;
-            option.innerText = user.category;
-            select.appendChild(option);
-    
+        $scope.katItems = res.data;
+        $scope.katItems.sort();
+        $scope.$apply();
 
-
+        $scope.katItems.value.forEach(element => {
+            if($scope.category.value.includes($scope.katItems.category)){
+                $scope.category.value.push($scope.katItems.category)
+            }
         });
-
-        $rootScope.$apply();
     }); 
 
-    
-
-    
-
 });
+
+
+  
+
+
+
+$scope.category = items.reduce((res, req) => {     
+    if (!res.categories.includes(req.category)) {         
+        res.categories.push(req.category);         
+        res[req.category] = [];     
+    }res[req.category].push(req);     
+    return res; }, { categories: [] 
+});
+
