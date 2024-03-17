@@ -1,34 +1,30 @@
 app.controller('listCtrl', function($scope){
 
-    $scope.katItems = [];
-    $scope.category = [];
+
+    $scope.kategoriak = [];
+
+    $scope.termekek = [];
 
 
-    axios.get('http://localhost:3000/mock_data').then(res => {
+    axios.get("http://localhost:3000/mock_data").then(res => {
+        $scope.termekek = res.data;
 
-        $scope.katItems = res.data;
-        $scope.katItems.sort();
-        $scope.$apply();
-
-        $scope.katItems.value.forEach(element => {
-            if($scope.category.value.includes($scope.katItems.category)){
-                $scope.category.value.push($scope.katItems.category)
+        for (let index = 0; index < $scope.termekek.length; index++) {
+            if (!$scope.kategoriak.includes($scope.termekek[index].category))
+            {
+                $scope.kategoriak.push($scope.termekek[index].category);
             }
-        });
-    }); 
+        }
 
+        for (let index = 0; index < $scope.kategoriak.length; index++) {
+            let option = document.createElement("option");
+            option.text = $scope.kategoriak[index];
+            kat.appendChild(option);
+        }
+
+
+
+        
+        $scope.$apply();
+    });
 });
-
-
-  
-
-
-
-$scope.category = items.reduce((res, req) => {     
-    if (!res.categories.includes(req.category)) {         
-        res.categories.push(req.category);         
-        res[req.category] = [];     
-    }res[req.category].push(req);     
-    return res; }, { categories: [] 
-});
-
