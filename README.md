@@ -1,1 +1,3 @@
 # Bevasarlo_lista
+
+Sziasztok:)
